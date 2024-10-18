@@ -17,7 +17,7 @@ import { mobileCheck } from "./functions/mobile-check";
 // window.addEventListener('resize', func);
 
 // Фикс фулскрин-блоков
-import './functions/fix-fullheight';
+// import './functions/fix-fullheight';
 
 // Реализация бургер-меню
 import { burger } from "./functions/burger";
@@ -59,7 +59,7 @@ Swiper.use([Navigation, Pagination, Scrollbar]);
 
 // Подключение параллакса блоков при скролле
 import Rellax from 'rellax';
-const rellax = new Rellax('.screen-first');
+
 
 // Подключение плавной прокрутки к якорям
 // import SmoothScroll from "smooth-scroll";
