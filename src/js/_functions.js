@@ -87,3 +87,14 @@ import Rellax from 'rellax';
 import { accordion } from "./functions/accordion";
 import { MY_SELECT } from "./functions/my-select";
 import { listener } from "./functions/listener";
+import Inputmask from "inputmask";
+const phones = document.querySelectorAll('.mask-tel');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+
+phones.forEach((item) => {
+  inputMask.mask(item);
+})
+
+$(document).ready(function() {
+  $('select').niceSelect();
+});

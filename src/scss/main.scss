@@ -228,6 +228,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: .3s ease;
   @media(max-width: 992px) {
     padding: 10px 40px;
   }
@@ -236,36 +237,12 @@
     position: relative;
     pointer-events: none;
   }
-  .anim {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 34%;
-    height: 0;
-    background-color: #fff;
-    transition: height 0.3s ease-in-out;
-    pointer-events: none;
+  
+  @media(any-hover: hover) {
+    background-color: var(--black);
+    border-color: var(--black);
   }
 
-  &:hover {
-
-
-    .anim {
-      animation: see 1s ease-in-out infinite;
-    }
-
-    .anim:nth-child(2) {
-      left: 50%;
-      transform: translateX(-50%);
-      animation-delay: .2s;
-    }
-
-    .anim:nth-child(3) {
-      right: 0;
-      left: auto;
-      animation-delay: .3s;
-    }
-  }
 }
 
 @keyframes see {
@@ -626,5 +603,37 @@
     border: 1px solid #fff;
     border-radius: 99px;
     padding: 18px 64px;
+  }
+}
+
+
+.select-money { 
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 131%;
+  letter-spacing: 0.16em;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 12px;
+  width: 100%;
+  outline: none;
+  border-radius: 0;
+  padding-left: 0;
+  & .list {
+    width: 100%;
+  }
+
+  li {
+    color: var(--black)
+  }
+
+  &:after {
+    width: 12px;
+    height: 12px;
+    top: 25%;
+    border-color: var(--white);
   }
 }
